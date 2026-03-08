@@ -24,7 +24,16 @@ now the fingerprint is generated and it will be stored in the .ssh location. can
 
 type %USERPROFILE%\.ssh\id_ed25519.pub
 will show the key just like
+
 ssh-ed25519 AA******************************* email@blahblahblah.com
 got to github -> settings-> SSH and GPG Keys
 New SSH Key
 provide title and provide the key then save. it will prompt for authentication then the connection is alive
+
+test the same using 
+ssh -T git@github.com
+which give response like
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi user! You've successfully authenticated, but GitHub does not provide shell access.
+
