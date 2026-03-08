@@ -1,0 +1,30 @@
+connect the git hub to local device.
+
+git config --global user.name "username"
+git config --global user.email "email@blahblahblah.com"
+
+git config --list       -- should print something like
+user.name=username
+user.email=email@blahblahblah.com
+
+check any ssh keygen available by
+ls ~/.ssh               -- for linux
+dir %USERPROFILE%\.ssh  -- for windows
+
+if it available show something like
+id_ed25519
+id_ed25519.pub
+if not available that is not shown. so we need to create it by running below cmd
+
+ssh-keygen -t ed25519 -C "email@blahblahblah.com"
+it will prompt to confirm the location to save the ssh key - press "enter" to save it in default location.
+prompt for passphrase - press "enter" to save with no passphrase
+confirm passphrase - press "enter" to save with no passphrase
+now the fingerprint is generated and it will be stored in the .ssh location. can confirm by "dir %USERPROFILE%\.ssh" or "ls ~/.ssh"
+
+type %USERPROFILE%\.ssh\id_ed25519.pub
+will show the key just like
+ssh-ed25519 AA******************************* email@blahblahblah.com
+got to github -> settings-> SSH and GPG Keys
+New SSH Key
+provide title and provide the key then save. it will prompt for authentication then the connection is alive
