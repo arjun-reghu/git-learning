@@ -37,3 +37,27 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
 Hi user! You've successfully authenticated, but GitHub does not provide shell access.
 
+
+============================================================================================================================================================================================================================================
+connect local folder and git
+open cmd from the project folder.
+git status       --gives current status of our project and files.
+git init         -- initializes the folder 
+create a repository in the git hub without readme, gitignore and license
+copy the repository address or path it will be like 
+git@github.com:username/reponame.git
+
+git add .                  -- add files
+git commit -m "comment"    -- commits the change with comment
+connect to git using 
+git remote add origin git@github.com:username/repo.git
+check connection using git remote -v
+push to git using
+git branch -M main
+git push -u origin main
+
+============================================================================================================================================================================================================================================
+
+git add .
+git commit -m "describe what you changed"
+git push
