@@ -53,8 +53,8 @@ connect to git using
 git remote add origin git@github.com:username/repo.git
 check connection using git remote -v
 push to git using
-git branch -M main
-git push -u origin main
+git branch -M master
+git push -u origin master
 
 ============================================================================================================================================================================================================================================
 
